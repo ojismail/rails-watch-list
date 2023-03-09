@@ -1,0 +1,17 @@
+<h1>Add a new movie</h1>
+
+<%= form_with(model: @movie, local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :overview %>
+  <%= form.text_area :overview %>
+
+  <%= form.label :poster_url %>
+  <%= form.text_field :poster_url %>
+
+  <%= form.label :rating %>
+  <%= form.number_field :rating %>
+
+  <%= form.submit "Add Movie" %>
+<% end %>
